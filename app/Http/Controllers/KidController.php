@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kid;
 use App\Http\Requests\StoreKidRequest;
 use App\Http\Requests\UpdateKidRequest;
+use App\Models\Grade;
 
 class KidController extends Controller
 {
@@ -13,7 +14,8 @@ class KidController extends Controller
      */
     public function index()
     {
-        //
+        $kids = Kid::paginate(10);
+        return view('kids.pages.index', get_defined_vars());
     }
 
     /**
@@ -21,7 +23,8 @@ class KidController extends Controller
      */
     public function create()
     {
-        //
+        $grades = Grade::all();
+        return view('kids.pages.create', get_defined_vars());
     }
 
     /**
@@ -29,7 +32,9 @@ class KidController extends Controller
      */
     public function store(StoreKidRequest $request)
     {
-        //
+        $data = $request->validated();
+        Kid::create($data);
+        return redirect()->route('kids.index')->with('success', 'تم اضافة الطفل بنجاح');
     }
 
     /**

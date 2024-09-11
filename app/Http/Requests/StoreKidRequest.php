@@ -22,7 +22,14 @@ class StoreKidRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'name' => 'required|string',
             //
+        ];
+    }
+    public function  messages() : array
+    {
+        return [
+        //
         ];
     }
 }
