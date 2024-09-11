@@ -1,5 +1,30 @@
 <?php
 
 return [
-    //
+    'home' => 'Home',
+    'kid' => 'Kid',
+    'first' => 'First',
+    'second' => 'Second',
+    'third' => 'Third',
+    'fourth' => 'Fourth',
+    'fifth' => 'Fifth',
+    'sixth' => 'Sixth',
+    'sunday_schools_system' => 'Sunday schools system',
+    'grade' => 'Grade',
+    'points' => 'Points',
+    'more' => 'More',
+    'search' => 'Search',
+    'add' => 'Add',
+    'add_kid' => 'Add a kid',
+    'phone' => 'Phone',
+    'date_of_birth' => 'Date of birth',
+    'address' => 'Address',
+    'notes' => 'Notes',
+    'choose_grade' => 'Choose Grade',
+    'edit' => 'Edit',
+    'edit_kid' => 'Edit Kid',
+    'delete_kid' => 'Delete Kid',
+    'name' => 'Name',
+    'copy_right' => 'All rights reserved © 2024 Mena Ehab',
+    'save' => 'Save',
 ];

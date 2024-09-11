@@ -1,8 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KidController;
 use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +16,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::controller(KidController::class)->group(function () {
-    Route::get('/', 'index')->name('kids.index');
-    route::get('/create', 'create')->name('kids.create');
-    Route::post('/store', 'store')->name('kids.store');
-});
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
+        'controller'=> KidController::class,
+    ],
+    function () {
+        Route::get('/', 'index')->name('kids.index');
+        route::get('/create', 'create')->name('kids.create');
+        Route::post('/store', 'store')->name('kids.store');
+    }
+);
 
 // Route::get('/', function () {
 //     return view('welcome');

@@ -1,24 +1,24 @@
 @extends('kids.master')
-@section('title','مدارس الاحد - صفحة الرئيسية')
+@section('title',__('keywords.sunday_schools_system') . ' - ' . __('keywords.home'))
 @section('content')
 <main class="main">
     <div class="container bg-light p-4 rounded">
-        <h3>صفحة الرئيسية</h3>
+        <h3>{{ __('keywords.home') }}</h3>
         <div class="d-flex justify-content-between my-4">
-            <a href="{{ route('kids.create') }}" class="btn btn-primary">اضافة</a>
+            <a href="{{ route('kids.create') }}" class="btn btn-primary">{{ __('keywords.add') }}</a>
             <div class="d-flex search-box">
-                <input type="text" class="form-control search-input" placeholder="بحث">
-                <button type="button" class="btn btn-primary ms-2">بحث</button>
+                <input type="text" class="form-control search-input" placeholder="{{ __('keywords.search') }}">
+                <button type="button" class="btn btn-primary ms-2">{{ __('keywords.search') }}</button>
             </div>
         </div>
         <table class="table table-striped my-4">
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th width="50%" scope="col">الاسم</th>
-                    <th scope="col">الصف</th>
-                    <th width="7.5%" scope="col">النقاط</th>
-                    <th width="7.5%" scope="col">المزيد</th>
+                    <th width="50%" scope="col">{{ __('keywords.name') }}</th>
+                    <th scope="col">{{ __('keywords.grade') }}</th>
+                    <th width="7.5%" scope="col">{{ __('keywords.points') }}</th>
+                    <th width="7.5%" scope="col">{{ __('keywords.more') }}</th>
                 </tr>
             </thead>
             <tbody>
