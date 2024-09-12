@@ -8,7 +8,7 @@
             <a href="{{ route('kids.create') }}" class="btn btn-primary">{{ __('keywords.add') }}</a>
             <div class="d-flex search-box">
                 <input type="text" class="form-control search-input" placeholder="{{ __('keywords.search') }}">
-                <button type="button" class="btn btn-primary ms-2">{{ __('keywords.search') }}</button>
+                <button type="button" class="btn btn-primary mx-2">{{ __('keywords.search') }}</button>
             </div>
         </div>
         <table class="table table-striped my-4">

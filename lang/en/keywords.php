@@ -27,4 +27,6 @@ return [
     'name' => 'Name',
     'copy_right' => 'All rights reserved © 2024 Mena Ehab',
     'save' => 'Save',
+    'language' => 'AR',
+
 ];
