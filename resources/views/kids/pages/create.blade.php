@@ -39,7 +39,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="points" class="form-label">{{ __('keywords.points') }}</label>
-                        <input name="points" type="text" class="form-control" id="points"
+                        <input name="points" type="number" class="form-control" id="points"
                             value="{{ old('points') }}" />
                         <x-error-alert error="points"></x-error-alert>
                     </div>

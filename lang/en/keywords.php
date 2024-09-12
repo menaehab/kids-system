@@ -28,5 +28,5 @@ return [
     'copy_right' => 'All rights reserved © 2024 Mena Ehab',
     'save' => 'Save',
     'language' => 'AR',
-
+    'success_added' => 'The kid has been added successfully',
 ];

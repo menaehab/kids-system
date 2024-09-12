@@ -23,7 +23,6 @@ class KidController extends Controller
      */
     public function create()
     {
-        $grades = Grade::all();
         return view('kids.pages.create', get_defined_vars());
     }
 
@@ -34,7 +33,7 @@ class KidController extends Controller
     {
         $data = $request->validated();
         Kid::create($data);
-        return redirect()->route('kids.index')->with('success', 'تم اضافة الطفل بنجاح');
+        return redirect()->route('kids.index')->with('success', __('keywords.success_added'));
     }
 
     /**

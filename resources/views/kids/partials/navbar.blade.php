@@ -8,24 +8,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">الاول</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">التاني</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">التالت</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">الرابع</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">الخامس</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">السادس</a>
-                    </li>
+                    @if ($grades->count() > 0)
+                        @foreach ($grades as $grade)
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">{{ $grade->name }}</a>
+                            </li>
+                        @endforeach
+                    @endif
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control mx-2" type="search" placeholder="{{ __('keywords.search') }}"

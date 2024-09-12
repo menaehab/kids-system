@@ -4,6 +4,7 @@
     <main class="main">
         <div class="container bg-light p-4 rounded">
             <h3>{{ __('keywords.home') }}</h3>
+            <x-success-alert></x-success-alert>
             <div class="d-flex justify-content-between my-4">
                 <a href="{{ route('kids.create') }}" class="btn btn-primary">{{ __('keywords.add') }}</a>
                 <div class="d-flex search-box">
