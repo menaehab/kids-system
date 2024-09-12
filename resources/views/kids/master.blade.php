@@ -4,7 +4,9 @@
 
 <body>
     @include('kids.partials.navbar')
-    <x-language></x-language>
+    <div class="container">
+        <x-language></x-language>
+    </div>
     @yield('content')
     @include('kids.partials.footer')
     @include('kids.partials.script')

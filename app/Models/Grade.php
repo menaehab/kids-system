@@ -9,8 +9,10 @@ class Grade extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name'];
+
     public function kids()
     {
-        return $this->hasMany(Kid::class);
+        return $this->hasMany(Kid::class, 'grade_id');
     }
 }
