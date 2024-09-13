@@ -29,6 +29,7 @@ return [
     'save' => 'Save',
     'language' => 'AR',
     'success_added' => 'The kid has been added successfully',
+    'success_edited' => 'The kid has been edited successfully',
     'show' => 'Show kid  details',
     'delete' => 'Delete',
 ];

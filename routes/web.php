@@ -27,6 +27,9 @@ Route::group(
         Route::get('/create', 'create')->name('kids.create');
         Route::post('/store', 'store')->name('kids.store');
         Route::get('/show/{kid}', 'show')->name('kids.show');
+        Route::get('/edit/{kid}', 'edit')->name('kids.edit');
+        Route::put('/update/{kid}', 'update')->name('kids.update');
+
     }
 );
 // Route::get('/', function () {

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Kid;
 use App\Http\Requests\StoreKidRequest;
 use App\Http\Requests\UpdateKidRequest;
-use App\Models\Grade;
 
 class KidController extends Controller
 {
@@ -49,7 +48,7 @@ class KidController extends Controller
      */
     public function edit(Kid $kid)
     {
-        //
+        return view('kids.pages.edit', get_defined_vars());
     }
 
     /**
@@ -57,7 +56,9 @@ class KidController extends Controller
      */
     public function update(UpdateKidRequest $request, Kid $kid)
     {
-        //
+        $data = $request->validated();
+        $kid->update($data);
+        return redirect()->route('kids.index')->with('success', __('keywords.success_edited'));
     }
 
     /**
