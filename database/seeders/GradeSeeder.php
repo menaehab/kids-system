@@ -13,23 +13,23 @@ class GradeSeeder extends Seeder
      */
     public function run(): void
     {
-        Grade::updateOrCreate(['name' => 'الاول'], [
-            'name' => 'الاول',
+        Grade::updateOrCreate(['name' => 'first'], [
+            'name' => 'first',
         ]);
-        Grade::updateOrCreate(['name' => 'الثاني'], [
-            'name' => 'الثاني',
+        Grade::updateOrCreate(['name' => 'second'], [
+            'name' => 'second',
         ]);
-        Grade::updateOrCreate(['name' => 'الثالث'], [
-            'name' => 'الثالث',
+        Grade::updateOrCreate(['name' => 'third'], [
+            'name' => 'third',
         ]);
-        Grade::updateOrCreate(['name' => 'الرابع'], [
-            'name'  => 'الرابع',
+        Grade::updateOrCreate(['name' => 'fourth'], [
+            'name'  => 'fourth',
         ]);
-        Grade::updateOrCreate(['name' => ' الخامس'], [
-            'name' => 'الخامس',
+        Grade::updateOrCreate(['name' => ' fifth'], [
+            'name' => 'fifth',
         ]);
-        Grade::updateOrCreate(['name' => 'السادس'], [
-            'name' => 'السادس',
+        Grade::updateOrCreate(['name' => 'sixth'], [
+            'name' => 'sixth',
         ]);
     }
 }

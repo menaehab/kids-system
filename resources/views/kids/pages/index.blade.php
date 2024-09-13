@@ -28,7 +28,7 @@
                             <tr>
                                 <th scope="row">{{ $kids->firstItem() + $loop->index }}</th>
                                 <td>{{ $kid->name }}</td>
-                                <td>{{ $kid->grade->name }}</td>
+                                <td>{{ __('keywords.' . $kid->grade->name) }}</td>
                                 <td>{{ $kid->points }}</td>
                                 <td>
                                     <a href="#" class="btn btn-primary btn-sm"><i

@@ -19,7 +19,7 @@
                             <option value="" selected>{{ __('keywords.choose_grade') }}</option>
                             @foreach ($grades as $grade)
                                 <option value="{{ $grade->id }}" {{ old('grade_id') == $grade->id ? 'selected' : '' }}>
-                                    {{ $grade->name }}
+                                    {{ __("keywords.$grade->name") }}
                                 </option>
                             @endforeach
                         </select>

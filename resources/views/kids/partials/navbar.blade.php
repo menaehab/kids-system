@@ -11,7 +11,7 @@
                     @if ($grades->count() > 0)
                         @foreach ($grades as $grade)
                             <li class="nav-item">
-                                <a class="nav-link" href="#">{{ $grade->name }}</a>
+                                <a class="nav-link" href="#">{{ __("keywords.$grade->name") }}</a>
                             </li>
                         @endforeach
                     @endif
