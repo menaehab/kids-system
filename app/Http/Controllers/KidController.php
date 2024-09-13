@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kid;
+use App\Models\Grade;
 use App\Http\Requests\StoreKidRequest;
 use App\Http\Requests\UpdateKidRequest;
 
@@ -68,5 +69,10 @@ class KidController extends Controller
     {
         $kid->delete();
         return redirect()->route('kids.index')->with('success', __('keywords.success_deleted'));
+    }
+
+    public function grade(Grade $grade) {
+        $kids = Kid::where('grade_id', $grade->id)->paginate(10);
+        return  view('kids.pages.grade', get_defined_vars());
     }
 }

@@ -29,6 +29,7 @@ Route::group(
         Route::get('/edit/{kid}', 'edit')->name('kids.edit');
         Route::put('/update/{kid}', 'update')->name('kids.update');
         Route::delete('delete/{kid}', 'destroy')->name('kids.destroy');
+        Route::get('/grade/{grade}', 'grade')->name('kids.grade');
     }
 );
 // Route::get('/', function () {
