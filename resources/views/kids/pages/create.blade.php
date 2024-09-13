@@ -1,5 +1,5 @@
 @extends('kids.master')
-@section('title', __('keywords.sunday_schools_system') . ' - ' . __('keywords.add_kid'))
+@section('title', __('keywords.add_kid'))
 @section('content')
     <main class="main">
         <div class="container bg-light p-4 rounded">

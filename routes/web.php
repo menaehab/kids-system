@@ -20,15 +20,15 @@ Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
-        'controller'=> KidController::class,
+        'controller' => KidController::class,
     ],
     function () {
         Route::get('/', 'index')->name('kids.index');
-        route::get('/create', 'create')->name('kids.create');
+        Route::get('/create', 'create')->name('kids.create');
         Route::post('/store', 'store')->name('kids.store');
+        Route::get('/show/{kid}', 'show')->name('kids.show');
     }
 );
-
 // Route::get('/', function () {
 //     return view('welcome');
 // });

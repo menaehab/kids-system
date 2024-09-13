@@ -41,7 +41,7 @@ class KidController extends Controller
      */
     public function show(Kid $kid)
     {
-        //
+        return view('kids.pages.show', get_defined_vars());
     }
 
     /**

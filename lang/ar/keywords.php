@@ -29,5 +29,7 @@ return [
     'save' => 'حفظ',
     'language' => 'EN',
     'success_added' => 'تم اضافة الطفل بنجاح',
+    'show' => 'عرض تفاصيل الطفل',
+    'delete' => 'حذف',
 
 ];
