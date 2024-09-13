@@ -1,13 +1,13 @@
 <header>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid container">
-            <a class="navbar-brand" href="{{ route('kids.index') }}">{{ __('keywords.sunday_schools_system') }}</a>
+            <a class="navbar-brand mx-4" href="{{ route('kids.index') }}">{{ __('keywords.sunday_schools_system') }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!-- Added ms-auto class here -->
                     @if ($grades->count() > 0)
                         @foreach ($grades as $grade)
                             <li class="nav-item">
