@@ -30,6 +30,7 @@ return [
     'language' => 'AR',
     'success_added' => 'The kid has been added successfully',
     'success_edited' => 'The kid has been edited successfully',
+    'success_deleted' => 'The kid has been deleted successfully',
     'show' => 'Show kid  details',
     'delete' => 'Delete',
 ];

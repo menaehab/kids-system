@@ -15,7 +15,6 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
@@ -29,7 +28,7 @@ Route::group(
         Route::get('/show/{kid}', 'show')->name('kids.show');
         Route::get('/edit/{kid}', 'edit')->name('kids.edit');
         Route::put('/update/{kid}', 'update')->name('kids.update');
-
+        Route::delete('delete/{kid}', 'destroy')->name('kids.destroy');
     }
 );
 // Route::get('/', function () {

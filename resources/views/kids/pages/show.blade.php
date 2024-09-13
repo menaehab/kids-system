@@ -44,8 +44,14 @@
                 <label for="exampleFormControlTextarea1" class="form-label">{{ __('keywords.notes') }}</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" readonly>{{ $kid->notes }}</textarea>
             </div>
-            <a href="{{ route('kids.edit', $kid->id) }}" class="btn btn-primary mt-4">{{ __('keywords.edit') }}</a>
-            <a href="#" class="btn btn-danger mt-4">{{ __('keywords.delete') }}</a>
+            <form action="{{ route('kids.edit', $kid) }}" method="get" class="d-inline">
+                <button type="submit" class="btn btn-primary">{{ __('keywords.edit') }}</button>
+            </form>
+            <form id="delete" action="{{ route('kids.destroy', $kid->id) }}" method="POST" class="d-inline">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger">{{ __('keywords.delete') }}</button>
+            </form>
         </div>
         </div>
     </main>

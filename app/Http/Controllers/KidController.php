@@ -66,6 +66,7 @@ class KidController extends Controller
      */
     public function destroy(Kid $kid)
     {
-        //
+        $kid->delete();
+        return redirect()->route('kids.index')->with('success', __('keywords.success_deleted'));
     }
 }
