@@ -17,9 +17,8 @@
                         @endforeach
                     @endif
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control mx-2" type="search" placeholder="{{ __('keywords.search') }}"
-                        aria-label="Search" />
+                <form class="d-flex" role="search" method="GET" action="{{ route('kids.search') }}">
+                    <input class="form-control mx-2" type="search" name="query" placeholder="{{ __('keywords.search') }}" aria-label="Search" />
                     <button class="btn btn-outline-light" type="submit">{{ __('keywords.search') }}</button>
                 </form>
             </div>

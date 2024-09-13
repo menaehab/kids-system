@@ -30,6 +30,7 @@ Route::group(
         Route::put('/update/{kid}', 'update')->name('kids.update');
         Route::delete('delete/{kid}', 'destroy')->name('kids.destroy');
         Route::get('/grade/{grade}', 'grade')->name('kids.grade');
+        Route::get('/kids/search', 'search')->name('kids.search');
     }
 );
 // Route::get('/', function () {

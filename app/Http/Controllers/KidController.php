@@ -6,6 +6,7 @@ use App\Models\Kid;
 use App\Models\Grade;
 use App\Http\Requests\StoreKidRequest;
 use App\Http\Requests\UpdateKidRequest;
+use Illuminate\Http\Request;
 
 class KidController extends Controller
 {
@@ -75,4 +76,11 @@ class KidController extends Controller
         $kids = Kid::where('grade_id', $grade->id)->paginate(10);
         return  view('kids.pages.grade', get_defined_vars());
     }
+
+    public function search(Request $request)
+{
+    $query = $request->input('query');
+    $kids = Kid::where('name', 'like', "%{$query}%")->paginate(10);
+    return view('kids.pages.index', compact('kids'));
+}
 }

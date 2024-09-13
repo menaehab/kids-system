@@ -7,10 +7,11 @@
             <x-success-alert></x-success-alert>
             <div class="d-flex justify-content-between my-4">
                 <a href="{{ route('kids.create') }}" class="btn btn-primary">{{ __('keywords.add') }}</a>
-                <div class="d-flex search-box">
-                    <input type="text" class="form-control search-input" placeholder="{{ __('keywords.search') }}">
-                    <button type="button" class="btn btn-primary mx-2">{{ __('keywords.search') }}</button>
-                </div>
+                <form class="d-flex search-box" method="GET" action="{{ route('kids.search') }}">
+                    <input type="text" class="form-control search-input" name="query"
+                        placeholder="{{ __('keywords.search') }}">
+                    <button type="submit" class="btn btn-primary mx-2">{{ __('keywords.search') }}</button>
+                </form>
             </div>
             <table class="table table-striped my-4">
                 <thead>
