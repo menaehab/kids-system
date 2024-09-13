@@ -33,4 +33,10 @@ return [
     'success_deleted' => 'The kid has been deleted successfully',
     'show' => 'Show kid  details',
     'delete' => 'Delete',
+    'login' => 'login',
+    'login_system' => 'login system',
+    'email' => 'Email',
+    'password' => 'Password',
+    'remember' => 'Remember me',
+
 ];
