@@ -72,15 +72,36 @@ class KidController extends Controller
         return redirect()->route('kids.index')->with('success', __('keywords.success_deleted'));
     }
 
-    public function grade(Grade $grade) {
+    public function grade(Grade $grade)
+    {
         $kids = Kid::where('grade_id', $grade->id)->paginate(10);
-        return  view('kids.pages.grade', get_defined_vars());
+        return view('kids.pages.grade', get_defined_vars());
     }
 
     public function search(Request $request)
-{
-    $query = $request->input('query');
-    $kids = Kid::where('name', 'like', "%{$query}%")->paginate(10);
-    return view('kids.pages.index', compact('kids'));
-}
+    {
+        $query = $request->input('query');
+        $kids = Kid::where('name', 'like', "%{$query}%")->paginate(10);
+        return view('kids.pages.index', compact('kids'));
+    }
+    public function points(Kid $kid)
+    {
+        return view('kids.pages.points', get_defined_vars());
+    }
+    public function pointsUpdate(Request $request, Kid $kid)
+    {
+        $request->validate([
+            'points' => 'required|integer|min:1',
+        ]);
+        $points = $request->input('points');
+        if ($request->input('action') == 'add') {
+            $kid->points += $points;
+        } elseif ($request->input('action') == 'subtract') {
+            $kid->points = $kid->points - $points;
+        }
+        $kid->save();
+        return redirect()->route('kids.index', $kid)
+            ->with('success', __('keywords.points_updated'));
+    }
+
 }

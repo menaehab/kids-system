@@ -38,5 +38,8 @@ return [
     'email' => 'Email',
     'password' => 'Password',
     'remember' => 'Remember me',
-
+    'show_points' => 'Show points',
+    'add_points' => 'Add points',
+    'subtract_points' =>  'Subtract points',
+    'points_updated' => 'Points updated successfully',
 ];

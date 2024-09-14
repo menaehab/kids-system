@@ -32,7 +32,7 @@
                                 <td>{{ __('keywords.' . $kid->grade->name) }}</td>
                                 <td>{{ $kid->points }}</td>
                                 <td>
-                                    <a href="{{ route('kids.show', $kid->id) }}" class="btn btn-primary btn-sm"><i
+                                    <a href="{{ route('kids.points', $kid->id) }}" class="btn btn-primary btn-sm"><i
                                             class="fas fa-eye text-light"></i></a>
                                 </td>
                             </tr>

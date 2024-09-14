@@ -38,4 +38,9 @@ return [
     'password' => 'كلمة المرور',
     'login' => 'تسجيل الدخول',
     'remember' => 'تذكرنى',
+    'show_points' => 'عرض النقاط',
+    'add_points' => 'زيادة نقاط',
+    'subtract_points' => 'طرح نقاط',
+    'points_updated' => 'تم تحديث النقاط بنجاح',
+
 ];

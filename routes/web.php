@@ -31,8 +31,22 @@ Route::group(
         Route::delete('delete/{kid}', 'destroy')->name('kids.destroy');
         Route::get('/grade/{grade}', 'grade')->name('kids.grade');
         Route::get('/kids/search', 'search')->name('kids.search');
+        Route::get('/points/{kid}', 'points')->name('kids.points');
+        Route::put('/points/update/{kid}',  'pointsUpdate')->name('kids.points.update');
+
     }
 );
+
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
+    ],
+    function () {
+        require __DIR__ . '/auth.php';
+    }
+);
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -46,13 +60,3 @@ Route::group(
 //     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
-
-Route::group(
-    [
-        'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
-    ],
-    function () {
-        require __DIR__ . '/auth.php';
-    }
-);
